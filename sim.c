@@ -8,9 +8,17 @@ double calc_fuerza(void);
 
 int main(void)
 {
-    pedir_masas();
-    double F = calc_fuerza();
-    printf("Fuerza gravitacional: %e N\n", F);
+    int C = 0;
+    // Crear menu
+    printf("¿Qué deseas calcular?\n1. Fuerza gravitacional\n2. Distancia\n3. Periodo\n4. Frecuencia\n5. Velocidad\n");
+    scanf("%i", &C);
+    
+    if (C == 1)
+    {
+        pedir_masas();
+        double F = calc_fuerza();
+        printf("Fuerza gravitacional: %e N\n", F);
+    }
     return 0;
 }
 
